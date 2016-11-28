@@ -14,7 +14,7 @@ from collections import OrderedDict as OD
 import threading
 
 
-#consider re-ordering this from largest to smallest. That way line XXX - XXX don't have to
+#consider re-ordering this from largest to smallest. That way line 44 - 50 don't have to
 #continually set s/rx_affix and s/rx_multi. If we go from large to small it will only change once.
 multis = OD()
 multis[1] = "Bytes/s"
