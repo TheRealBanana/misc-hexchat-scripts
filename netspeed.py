@@ -1,5 +1,5 @@
 # netspeed printer using psutil
-# September 2016
+# Last Modified October 2017
 # Kyle Claisse
 __module_name__ = "Network Speed Indicator" 
 __module_version__ = "1.2" 
@@ -61,8 +61,6 @@ class Netspeed(threading.Thread):
 def netspeed(word, word_eol, userdata):
     #Warn the user this will take some time if the sample_time is more than 1 second
     if sample_time > 1: print "Collecting network stats, this will take %.2f seconds" % sample_time
-    #Are these thread object piling up with every use??
-    #Should be be .join()'ing them? Maybe we reuse some global Netspeed object to make sure each thread always gets reused.
     ns = Netspeed(userdata)
     ns.start()
     ns.join()
